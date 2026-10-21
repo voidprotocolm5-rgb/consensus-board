@@ -693,6 +693,10 @@
     display: none;
   }
 
+  .inline {
+    display: inline;
+  }
+
   .inline-block {
     display: inline-block;
   }
@@ -1620,6 +1624,16 @@
 
   .text-sky-300 {
     color: var(--color-sky-300);
+  }
+
+  .text-sky-300\/90 {
+    color: #77d4ffe6;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-sky-300\/90 {
+      color: color-mix(in oklab, var(--color-sky-300) 90%, transparent);
+    }
   }
 
   .text-sky-400\/80 {
