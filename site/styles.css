@@ -211,10 +211,15 @@
     --color-amber-500: #f99c00;
     --color-amber-900: #7b3306;
     --color-amber-950: #461901;
+    --color-emerald-100: #d0fae5;
+    --color-emerald-200: #a4f4cf;
     --color-emerald-300: #5ee9b5;
     --color-emerald-400: #00d294;
     --color-emerald-500: #00bb7f;
     --color-emerald-600: #009767;
+    --color-emerald-800: #005f46;
+    --color-emerald-900: #004e3b;
+    --color-emerald-950: #002c22;
     --color-sky-100: #dff2fe;
     --color-sky-300: #77d4ff;
     --color-sky-400: #00bcfe;
@@ -291,10 +296,15 @@
       --color-amber-500: lab(72.7183% 31.8672 97.9407);
       --color-amber-900: lab(31.2288% 30.2627 40.0378);
       --color-amber-950: lab(15.8111% 20.9107 23.3752);
+      --color-emerald-100: lab(94.9004% -17.0769 5.63836);
+      --color-emerald-200: lab(90.2247% -31.039 9.47084);
       --color-emerald-300: lab(83.9203% -48.7124 13.8849);
       --color-emerald-400: lab(75.0771% -60.7313 19.4147);
       --color-emerald-500: lab(66.9756% -58.27 19.5419);
       --color-emerald-600: lab(55.0481% -49.9246 15.93);
+      --color-emerald-800: lab(35.3675% -33.1188 8.04002);
+      --color-emerald-900: lab(28.8637% -26.9249 5.45986);
+      --color-emerald-950: lab(15.0582% -17.9507 2.38369);
       --color-sky-100: lab(94.3709% -4.56053 -8.23453);
       --color-sky-300: lab(80.3307% -20.2945 -31.385);
       --color-sky-400: lab(70.687% -23.6078 -45.9483);
@@ -658,6 +668,10 @@
     margin-bottom: calc(var(--spacing) * 2);
   }
 
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+
   .ml-0\.5 {
     margin-left: calc(var(--spacing) * .5);
   }
@@ -979,6 +993,26 @@
     }
   }
 
+  .border-emerald-800\/60 {
+    border-color: #005f4699;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-emerald-800\/60 {
+      border-color: color-mix(in oklab, var(--color-emerald-800) 60%, transparent);
+    }
+  }
+
+  .border-emerald-900\/40 {
+    border-color: #004e3b66;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-emerald-900\/40 {
+      border-color: color-mix(in oklab, var(--color-emerald-900) 40%, transparent);
+    }
+  }
+
   .border-sky-900\/50 {
     border-color: #024a7080;
   }
@@ -1014,6 +1048,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-amber-500\/10 {
       background-color: color-mix(in oklab, var(--color-amber-500) 10%, transparent);
+    }
+  }
+
+  .bg-amber-500\/15 {
+    background-color: #f99c0026;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-amber-500\/15 {
+      background-color: color-mix(in oklab, var(--color-amber-500) 15%, transparent);
     }
   }
 
@@ -1092,6 +1136,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-emerald-600\/20 {
       background-color: color-mix(in oklab, var(--color-emerald-600) 20%, transparent);
+    }
+  }
+
+  .bg-emerald-950\/20 {
+    background-color: #002c2233;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-emerald-950\/20 {
+      background-color: color-mix(in oklab, var(--color-emerald-950) 20%, transparent);
     }
   }
 
@@ -1411,6 +1465,10 @@
     padding-block: calc(var(--spacing) * 16);
   }
 
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
+
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
@@ -1586,6 +1644,26 @@
     }
   }
 
+  .text-emerald-100\/70 {
+    color: #d0fae5b3;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-emerald-100\/70 {
+      color: color-mix(in oklab, var(--color-emerald-100) 70%, transparent);
+    }
+  }
+
+  .text-emerald-200\/80 {
+    color: #a4f4cfcc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-emerald-200\/80 {
+      color: color-mix(in oklab, var(--color-emerald-200) 80%, transparent);
+    }
+  }
+
   .text-emerald-300 {
     color: var(--color-emerald-300);
   }
@@ -1632,6 +1710,16 @@
 
   .text-sky-300 {
     color: var(--color-sky-300);
+  }
+
+  .text-sky-300\/80 {
+    color: #77d4ffcc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-sky-300\/80 {
+      color: color-mix(in oklab, var(--color-sky-300) 80%, transparent);
+    }
   }
 
   .text-sky-300\/90 {
